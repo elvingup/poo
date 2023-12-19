@@ -1,12 +1,13 @@
 <?php
 class VeiculoCarga extends Veiculo{
 
-    public function VeiculoCarga($modelo, $cor, $tipo,$porte,$eixos){
+    public function __construct($modelo, $cor, $tipo,$porte,$eixos,$velocidade){
         $this->modelo = $modelo;
         $this->cor = $cor;
         $this->tipo = $tipo;
         $this->porte = $porte;
         $this->eixos = $eixos;
+        $this->velocidade = $velocidade;
     }
 
     public function setVeiculoCarga($tipo, $porte, $eixos){
