@@ -1,13 +1,13 @@
 <?php
-namespace correio\correios;
+namespace correio\transportadora;
 
 use correio\Logistica;
 
-class Correios extends Logistica{
+class Transportadora extends Logistica{
 
     // ATRIBUTOS
     public $remetente, $origem, $destino, $prazo, $pagamento,
-    $distancia, $rapido, $fator, $cubagem, $peso
+    $distancia, $rapido, $fator
     ;
 
     // IMPLEMENTAÇÃO DOS ABSTRATOS
@@ -90,29 +90,11 @@ class Correios extends Logistica{
         return $this->prazo;
     }
 
-    public function setCubagem($cubagem){
-        $this->cubagem = $cubagem;
-    }
-    public function getCubagem(){
-        return $this->cubagem;
-    }
-
-    public function setPeso($peso){
-        $this->peso = $peso;
-    }
-    public function getPeso(){
-        return $this->peso;
-    }
-
     public function setPagamento($pagamento){
         
-        echo "Distância: {$this->getDistancia()}";
+        echo "Distância: {getDistancia()}";
         
-        echo "Prazo: {$this->getPrazo()}";
-
-        echo "Cubagem: {$this->getCubagem()}";
-
-        echo "Peso: {$this->getPeso()}";
+        echo "Prazo: {getPrazo()}";
 
         $this->pagamento = $pagamento;
     }
